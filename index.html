@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Daily Journal</h1>
+            <div class="date-display" id="currentDate"></div>
+        </div>
+
+        <div class="main-content">
+            <div class="entry-form">
+                <div class="form-group">
+                    <label for="entryDate">Date</label>
+                    <input type="date" id="entryDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="entryContent">How was your day?</label>
+                    <div class="textarea-container">
+                        <textarea id="entryContent" placeholder="Share your thoughts, experiences, and reflections from today..." required></textarea>
+                        <div class="char-count">
+                            <span id="charCount">0</span> characters
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-container">
+                    <button class="btn btn-primary" onclick="saveEntry()">Save Entry</button>
+                    <button class="btn btn-secondary" onclick="clearForm()">Clear</button>
+                </div>
+            </div>
+
+            <div class="entries-section">
+                <h2 class="section-title">📖 Your Journal Entries</h2>
+                <div id="entriesList"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
